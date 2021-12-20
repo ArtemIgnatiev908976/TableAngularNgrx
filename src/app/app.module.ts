@@ -6,9 +6,10 @@ import { AppComponent } from "./app.component";
 import { StoreModule } from "@ngrx/store";
 import { statusReducer } from "./store/status.reducer";
 import { listReducer } from "./store/list.reducer";
+import { ItemStatusComponent } from './components/item-status/item-status.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ItemStatusComponent],
   imports: [
     BrowserModule,
     StoreModule.forRoot({

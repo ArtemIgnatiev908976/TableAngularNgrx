@@ -30,5 +30,3 @@ export function statusReducer(
 ): IStatusState {
   return _statusReducer(state, action);
 }
-
-
