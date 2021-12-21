@@ -7,7 +7,7 @@ import {IStatusItem} from "../../models/status.model";
   styleUrls: ['./item-status.component.css']
 })
 export class ItemStatusComponent implements OnInit {
-  @Input() itemId: number;
+  @Input() statusId: number;
   @Input() itemsStatusNames: IStatusItem[];
 
   statusName: string;
@@ -15,7 +15,7 @@ export class ItemStatusComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const status = this.itemsStatusNames.find((item: IStatusItem) => item.id === this.itemId);
+    const status = this.itemsStatusNames.find((item: IStatusItem) => item.id === this.statusId);
     this.statusName = status.label;
   }
 }

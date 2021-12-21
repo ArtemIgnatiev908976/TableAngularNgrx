@@ -42,7 +42,7 @@
     <td>{{item.date | date: 'dd.MM.yyyy' }}</td>
     <td>
       <app-item-status
-          [itemId]="item.statusId"
+          [statusId]="item.statusId"
           [itemsStatusNames]="ctx.statusItems"
       ></app-item-status>
     </td>
