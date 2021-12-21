@@ -1,0 +1,8 @@
+<div *ngIf="{listItems: listItems$ | async, statusItems: statusItems$ | async} as ctx" >
+  <div *ngFor="let item of ctx.listItems"  >
+    <p>
+      {{getStatusName(item.statusId, ctx.statusItems)}}
+    </p>
+  </div>
+</div>
+

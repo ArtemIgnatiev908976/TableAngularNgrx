@@ -8,6 +8,8 @@
     <td>{{ status?.id }}</td>
     <td>{{ status?.label }}</td>
   </tr>
+
+
 </table>
 
 <h5>Список</h5>
@@ -41,10 +43,9 @@
     <td>{{item.fio}}</td>
     <td>{{item.date | date: 'dd.MM.yyyy' }}</td>
     <td>
-      <app-item-status
-          [statusId]="item.statusId"
-          [itemsStatusNames]="ctx.statusItems"
-      ></app-item-status>
+      <app-item-status></app-item-status>
     </td>
+
+
   </tr>
 </table>

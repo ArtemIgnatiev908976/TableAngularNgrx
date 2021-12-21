@@ -6,16 +6,17 @@ import { AppComponent } from "./app.component";
 import { StoreModule } from "@ngrx/store";
 import { statusReducer } from "./store/status.reducer";
 import { listReducer } from "./store/list.reducer";
-import { ItemStatusComponent } from './components/item-status/item-status.component';
+import {ItemStatusModule} from "./shared/item-status.module";
 
 @NgModule({
-  declarations: [AppComponent, ItemStatusComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     StoreModule.forRoot({
       status: statusReducer,
       list: listReducer
-    })
+    }),
+ItemStatusModule
   ],
   providers: [],
   bootstrap: [AppComponent]
