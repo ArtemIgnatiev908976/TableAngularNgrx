@@ -24,5 +24,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {}
 
-
+  getStatusName(statusId: number, statuses: IStatusItem[]) {
+    const status = statuses.find((item: IStatusItem) => item.id === statusId);
+    console.log(status.label);
+    return status.label;
+  }
 }
